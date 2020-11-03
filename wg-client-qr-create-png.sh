@@ -3,17 +3,8 @@
 # check for and set client name
 if [ -n "$1" ]; then
   client=$1
-  if [ grep '^[[:alnum:]][-_[:alnum:]]{0,30}[[:alnum:]]$' <<<$client ]; then
-    # regex matches, set first part of config file name
-    config=$client
-    echo "$client matches regex"
-  else
-    # regex failed
-    echo "client name must begin & end with a letter or number"
-    echo "can only contain letters numbers dashes and underscores"
-    echo "and must be 1 to 32 characters in length"
-    exit 1
-  fi
+  # set beginning of config file name
+  config=$client
 else
   echo "client name not set"
   exit 1
