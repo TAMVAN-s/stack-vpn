@@ -94,7 +94,7 @@ if [[ ! -d /etc/wireguard/clients ]]; then
 fi
 
 # make sure peers config dir exists
-if [[ ! -d /etc/wireguard/clients ]]; then
+if [[ ! -d /etc/wireguard/peers ]]; then
   install --owner=root --group=root --mode=700 --directory /etc/wireguard/peers
 fi
 
