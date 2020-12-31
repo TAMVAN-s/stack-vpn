@@ -226,6 +226,14 @@ systemctl daemon-reload
 systemctl enable wg-cron.timer
 systemctl start wg-cron.timer
 
+# display installation confirmation message
+echo "WireGuard is now installed and configured and running."
+echo "You can begin adding clients with the wg-client-add.sh script."
 
-/etc/aliases
-sed -i 's|//Unattended-Upgrade::Mail "";|Unattended-Upgrade::Mail "stack@stackaas.com";|g' /etc/apt/apt.conf.d/50unattended-upgrades
+# display instructions for enabling email notifications
+echo ""
+echo "To route system emails and to enable unattended upgrade notifications"
+echo "run these two commands, replacing user@example.com with your email address."
+echo ""
+echo "echo user@example.com >> /etc/aliases"
+echo "sed -i 's|//Unattended-Upgrade::Mail \"\";|Unattended-Upgrade::Mail \"user@example.com\";|g' /etc/apt/apt.conf.d/50unattended-upgrades"
