@@ -23,7 +23,7 @@ Download and install client software from [wireguard.com](https://www.wireguard.
 Add a client configuration to the server and display a qr code that can be scanned by a client. If the
 
 ```bash
-wg-client.sh username [device]
+wg-client-add.sh username [device]
 wg-client-qr-display.sh username [device]
 ```
 
@@ -31,7 +31,7 @@ If the device option is left off then a "default" device will be added for that 
 For example, to add a client config for a user named joe and display the qr code on the console screen run:
 
 ```bash
-wg-client.sh joe
+wg-client-add.sh joe
 wg-client-qr-display.sh joe
 ```
 
